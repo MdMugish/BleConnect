@@ -1,7 +1,11 @@
 # BleConnect
 
-I created a library for Bluetooth connectivity on top of Core Bluetooth (Support BLE Scan, Filter device by Name, Filter by UUID, ANCS Connectivity, Background Scan, etc)
-
+This library is for Bluetooth connectivity on top of Core Bluetooth which supports -
+1. BLE Scan
+2. Filter device by Name
+3. Filter by UUID
+4. ANCS Connectivity
+5. Background Scan
 
 ## Library
 
