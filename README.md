@@ -1,9 +1,9 @@
 # BleConnect
 
-## I created a library for Bluetooth connectivity on top of Core Bluetooth (Support BLE Scan, Filter device by Name, Filter by UUID, ANCS Connectivity, Background Scan, etc)
+I created a library for Bluetooth connectivity on top of Core Bluetooth (Support BLE Scan, Filter device by Name, Filter by UUID, ANCS Connectivity, Background Scan, etc)
 
 
-### Library
+## Library
 
 ```swift
 public enum BluetoothState : String {
