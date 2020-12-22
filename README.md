@@ -48,6 +48,11 @@ public class BleConnect : ObservableObject {
 <br><br>
 ### Example
 ```swift
+
+import ConnectBlu
+import CoreBluetooth
+
+
 class BluetoothManager : ObservableObject  {
 
     @Published var bluetoothState : BluetoothState = .unknown
@@ -87,7 +92,7 @@ extension BluetoothManager : BLE_Callbacks{
 ```swift
 
 struct ContentView: View {
-    @StateObject var vm = BluetoothManager()
+    @ObservedObject var vm = BluetoothManager()
     
     var body: some View {
         NavigationView{
