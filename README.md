@@ -135,4 +135,5 @@ struct ContentView: View {
 `vm.bleConnect.disconnectDevice():` If device is connected then only this button will be shown on the screen. You can disconnect the device by calling this function.\
 `vm.bleConnect.refreshListOfScannedDevice()` You can refresh your list by calling this function.
 
-
+<br><br><br>
+![alt text](https://github.com/MdMugish/BleConnect/blob/main/ListOfDevices.jpeg?raw=true)
