@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "BleConnect_Lib",
-        "repositoryURL": "https://github.com/MdMugish/BleConnect_Lib",
+        "repositoryURL": "https://github.com/MdMugish/BleConnect_Lib.git",
         "state": {
           "branch": null,
-          "revision": "777abbd2818283475f0c33d107d2f787a70bed80",
-          "version": "1.0.0"
+          "revision": "7513c9487f014c34f8fb5b76e579f85ee16b2e4d",
+          "version": "1.0.1"
         }
       }
     ]
