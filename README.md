@@ -6,6 +6,11 @@ This library is for Bluetooth connectivity on top of Core Bluetooth which suppor
 3. Filter by UUID
 4. ANCS Connectivity
 5. Background Scan
+6. Discover Services
+7. Discover Characteristics For Service
+8. Update Notification For Characteristics
+9. Update Value For Characteristics
+10. Write Value For Characteristics
 
 ## Library
 
@@ -26,18 +31,6 @@ public enum BluetoothState : String {
 }
 ```
 
-
-```swift
-public protocol BLE_Callbacks {
-    func didBluetoothStateChange(_ bluetoothState : BluetoothState)
-    func didDiscoverDevices(_ listOfDevice : [CBPeripheral])
-    func didDiscoverCharacteristicsForService(_ service : CBService, allCharacterisricsForThisService : [CBCharacteristic])
-    func didUpdateNotificationForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didUpdateValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didWriteValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didUpdateANCSAuthorized(state : Bool)
-}
-```
 
 ```swift
 public protocol BLE_Callbacks {
