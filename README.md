@@ -31,22 +31,30 @@ public enum BluetoothState : String {
 public protocol BLE_Callbacks {
     func didBluetoothStateChange(_ bluetoothState : BluetoothState)
     func didDiscoverDevices(_ listOfDevice : [CBPeripheral])
+    func didDiscoverCharacteristicsForService(_ service : CBService, allCharacterisricsForThisService : [CBCharacteristic])
+    func didUpdateNotificationForCharacteristics(characteristics : CBCharacteristic, error : Error?)
+    func didUpdateValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
+    func didWriteValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
+    func didUpdateANCSAuthorized(state : Bool)
 }
 ```
 
 ```swift
-public class BleConnect : ObservableObject {
+public protocol BLE_Callbacks {
 
-    public init(delegate: ConnectBlu.BLE_Callbacks, deviceNameShouldContain: String?, deviceUUID: String?)
+    func didBluetoothStateChange(_ bluetoothState: ConnectBlu.BluetoothState)
 
-    public func connectDevice(_ peripheral: CBPeripheral)
+    func didDiscoverDevices(_ listOfDevice: [CBPeripheral])
 
-    public func disconnectDevice()
+    func didDiscoverCharacteristicsForService(_ service: CBService, allCharacterisricsForThisService: [CBCharacteristic])
 
-    public func refreshListOfScannedDevice()
+    func didUpdateNotificationForCharacteristics(characteristics: CBCharacteristic, error: Error?)
 
-    /// The type of publisher that emits before the object has changed.
-    public typealias ObjectWillChangePublisher = ObservableObjectPublisher
+    func didUpdateValueForCharacteristics(characteristics: CBCharacteristic, error: Error?)
+
+    func didWriteValueForCharacteristics(characteristics: CBCharacteristic, error: Error?)
+
+    func didUpdateANCSAuthorized(state: Bool)
 }
 ```
 <br><br>
@@ -59,12 +67,22 @@ import CoreBluetooth
 
 class BluetoothManager : ObservableObject  {
 
-    @Published var bluetoothState : BluetoothState = .unknown
+    @Published var bluetoothState : BluetoothState = .unknown{
+        didSet{
+            if bluetoothState  == .connected{
+                connectedDevice = bleConnect.connectedDevice()
+            }
+        }
+    }
+    
     @Published var listOfDevice = [CBPeripheral]()
+    var connectedDevice : CBPeripheral?
+    
     var bleConnect: BleConnect!
 
     init() {
         bleConnect = BleConnect(delegate: self, deviceNameShouldContain: nil, deviceUUID: nil)
+        
     }
 
 }
@@ -78,18 +96,49 @@ class BluetoothManager : ObservableObject  {
 
 ```swift
 extension BluetoothManager : BLE_Callbacks{
+
+
     
     func didBluetoothStateChange(_ bluetoothState: BluetoothState) {
         self.bluetoothState = bluetoothState
     }
+    
 
      func didDiscoverDevices(_ listOfDevice: [CBPeripheral]) {
         self.listOfDevice = listOfDevice
     }
+    
+    func didDiscoverCharacteristicsForService(_ service: CBService, allCharacterisricsForThisService: [CBCharacteristic]) {
+        print("Service : \(service) and All characteristics for this service is \(allCharacterisricsForThisService)")
+    }
+    
+    func didUpdateNotificationForCharacteristics(characteristics: CBCharacteristic, error: Error?) {
+        
+    }
+
+    
+    func didUpdateValueForCharacteristics(characteristics: CBCharacteristic, error: Error?) {
+        
+    }
+    
+    func didWriteValueForCharacteristics(characteristics: CBCharacteristic, error: Error?) {
+        
+    }
+    
+    func didUpdateANCSAuthorized(state: Bool) {
+        
+    }
+    
+   
 }
 ```
 `didBluetoothStateChange:` will give you the current state of bluetooth.\
 `didDiscoverDevices:` will give you the list of unique deivces(peripherals).\
+`didDiscoverCharacteristicsForService:` will give you all characteristics for each services.\
+`didUpdateNotificationForCharacteristics:` will notify you when you will use connectedDevice?.setNotifyValue(Bool, for: CBCharacteristic).\
+`didUpdateValueForCharacteristics:` will give you the value when you will use connectedDevice?.readValue(for: CBCharacteristic).\
+`didWriteValueForCharacteristics:` will give you the value when you will use  connectedDevice?.writeValue(Data, for: CBCharacteristic, type: CBCharacteristicWriteType).\
+`didUpdateANCSAuthorized:` will give you the value when you will use ANCS.\
 
 <br><br>
 
