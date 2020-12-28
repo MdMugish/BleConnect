@@ -6,6 +6,11 @@ This library is for Bluetooth connectivity on top of Core Bluetooth which suppor
 3. Filter by UUID
 4. ANCS Connectivity
 5. Background Scan
+6. Discover Services
+7. Discover Characteristics For Service
+8. Update Notification For Characteristics
+9. Update Value For Characteristics
+10. Write Value For Characteristics
 
 ## Library
 
