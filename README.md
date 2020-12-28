@@ -1,5 +1,7 @@
 # BleConnect
 
+Swift Package Manager : https://github.com/MdMugish/BleConnect_Lib
+
 This library is for Bluetooth connectivity on top of Core Bluetooth which supports -
 1. BLE Scan
 2. Filter device by Name
