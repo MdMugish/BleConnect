@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC329B84259A513C004F7C7D /* BleConnect_Lib in Frameworks */ = {isa = PBXBuildFile; productRef = AC329B83259A513C004F7C7D /* BleConnect_Lib */; };
 		ACC40BA425922FD300FD0E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA325922FD300FD0E2A /* AppDelegate.swift */; };
 		ACC40BA625922FD300FD0E2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA525922FD300FD0E2A /* SceneDelegate.swift */; };
 		ACC40BA825922FD300FD0E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA725922FD300FD0E2A /* ContentView.swift */; };
@@ -14,8 +15,6 @@
 		ACC40BAD25922FD800FD0E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC40BAC25922FD800FD0E2A /* Preview Assets.xcassets */; };
 		ACC40BB025922FD800FD0E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC40BAE25922FD800FD0E2A /* LaunchScreen.storyboard */; };
 		ACC40BC42592302400FD0E2A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BC32592302400FD0E2A /* BluetoothManager.swift */; };
-		ACF026212599E03C0065FC2B /* ConnectBlu.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */; };
-		ACF026222599E03C0065FC2B /* ConnectBlu.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACF026222599E03C0065FC2B /* ConnectBlu.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +40,6 @@
 		ACC40BAF25922FD800FD0E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC40BB125922FD800FD0E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC40BC32592302400FD0E2A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ConnectBlu.xcframework; path = ../../ConnectBlu/ConnectBlu.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF026212599E03C0065FC2B /* ConnectBlu.xcframework in Frameworks */,
+				AC329B84259A513C004F7C7D /* BleConnect_Lib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +59,6 @@
 			children = (
 				ACC40BA225922FD300FD0E2A /* BleConnect */,
 				ACC40BA125922FD300FD0E2A /* Products */,
-				ACF0261F2599E03C0065FC2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,14 +93,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ACF0261F2599E03C0065FC2B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +110,9 @@
 			dependencies = (
 			);
 			name = BleConnect;
+			packageProductDependencies = (
+				AC329B83259A513C004F7C7D /* BleConnect_Lib */,
+			);
 			productName = BleConnect;
 			productReference = ACC40BA025922FD300FD0E2A /* BleConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +140,9 @@
 				Base,
 			);
 			mainGroup = ACC40B9725922FD300FD0E2A;
+			packageReferences = (
+				AC329B82259A513C004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */,
+			);
 			productRefGroup = ACC40BA125922FD300FD0E2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC329B82259A513C004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MdMugish/BleConnect_Lib";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC329B83259A513C004F7C7D /* BleConnect_Lib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC329B82259A513C004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */;
+			productName = BleConnect_Lib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACC40B9825922FD300FD0E2A /* Project object */;
 }

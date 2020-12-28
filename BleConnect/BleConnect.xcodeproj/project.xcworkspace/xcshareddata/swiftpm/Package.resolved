@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BleConnect_Lib",
+        "repositoryURL": "https://github.com/MdMugish/BleConnect_Lib",
+        "state": {
+          "branch": null,
+          "revision": "777abbd2818283475f0c33d107d2f787a70bed80",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
