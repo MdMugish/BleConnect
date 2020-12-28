@@ -13,9 +13,9 @@
 		ACC40BAA25922FD800FD0E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC40BA925922FD800FD0E2A /* Assets.xcassets */; };
 		ACC40BAD25922FD800FD0E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC40BAC25922FD800FD0E2A /* Preview Assets.xcassets */; };
 		ACC40BB025922FD800FD0E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC40BAE25922FD800FD0E2A /* LaunchScreen.storyboard */; };
-		ACC40BC02592301300FD0E2A /* ConnectBlu.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC40BBF2592301300FD0E2A /* ConnectBlu.xcframework */; };
-		ACC40BC12592301300FD0E2A /* ConnectBlu.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACC40BBF2592301300FD0E2A /* ConnectBlu.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACC40BC42592302400FD0E2A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BC32592302400FD0E2A /* BluetoothManager.swift */; };
+		ACF026212599E03C0065FC2B /* ConnectBlu.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */; };
+		ACF026222599E03C0065FC2B /* ConnectBlu.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACC40BC12592301300FD0E2A /* ConnectBlu.xcframework in Embed Frameworks */,
+				ACF026222599E03C0065FC2B /* ConnectBlu.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +41,8 @@
 		ACC40BAC25922FD800FD0E2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACC40BAF25922FD800FD0E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC40BB125922FD800FD0E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACC40BBF2592301300FD0E2A /* ConnectBlu.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ConnectBlu.xcframework; path = ../../ConnectBlu/ConnectBlu.xcframework; sourceTree = "<group>"; };
 		ACC40BC32592302400FD0E2A /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ConnectBlu.xcframework; path = ../../ConnectBlu/ConnectBlu.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC40BC02592301300FD0E2A /* ConnectBlu.xcframework in Frameworks */,
+				ACF026212599E03C0065FC2B /* ConnectBlu.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			children = (
 				ACC40BA225922FD300FD0E2A /* BleConnect */,
 				ACC40BA125922FD300FD0E2A /* Products */,
-				ACC40BBE2592301300FD0E2A /* Frameworks */,
+				ACF0261F2599E03C0065FC2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +97,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ACC40BBE2592301300FD0E2A /* Frameworks */ = {
+		ACF0261F2599E03C0065FC2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACC40BBF2592301300FD0E2A /* ConnectBlu.xcframework */,
+				ACF026202599E03C0065FC2B /* ConnectBlu.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
