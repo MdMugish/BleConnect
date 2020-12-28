@@ -34,18 +34,6 @@ public enum BluetoothState : String {
 
 ```swift
 public protocol BLE_Callbacks {
-    func didBluetoothStateChange(_ bluetoothState : BluetoothState)
-    func didDiscoverDevices(_ listOfDevice : [CBPeripheral])
-    func didDiscoverCharacteristicsForService(_ service : CBService, allCharacterisricsForThisService : [CBCharacteristic])
-    func didUpdateNotificationForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didUpdateValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didWriteValueForCharacteristics(characteristics : CBCharacteristic, error : Error?)
-    func didUpdateANCSAuthorized(state : Bool)
-}
-```
-
-```swift
-public protocol BLE_Callbacks {
 
     func didBluetoothStateChange(_ bluetoothState: ConnectBlu.BluetoothState)
 
