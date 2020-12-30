@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC329B8D259A5859004F7C7D /* BleConnect_Lib in Frameworks */ = {isa = PBXBuildFile; productRef = AC329B8C259A5859004F7C7D /* BleConnect_Lib */; };
 		ACC40BA425922FD300FD0E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA325922FD300FD0E2A /* AppDelegate.swift */; };
 		ACC40BA625922FD300FD0E2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA525922FD300FD0E2A /* SceneDelegate.swift */; };
 		ACC40BA825922FD300FD0E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC40BA725922FD300FD0E2A /* ContentView.swift */; };
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC329B8D259A5859004F7C7D /* BleConnect_Lib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +109,6 @@
 			);
 			name = BleConnect;
 			packageProductDependencies = (
-				AC329B8C259A5859004F7C7D /* BleConnect_Lib */,
 			);
 			productName = BleConnect;
 			productReference = ACC40BA025922FD300FD0E2A /* BleConnect.app */;
@@ -141,7 +138,6 @@
 			);
 			mainGroup = ACC40B9725922FD300FD0E2A;
 			packageReferences = (
-				AC329B8B259A5859004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */,
 			);
 			productRefGroup = ACC40BA125922FD300FD0E2A /* Products */;
 			projectDirPath = "";
@@ -373,25 +369,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AC329B8B259A5859004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MdMugish/BleConnect_Lib.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AC329B8C259A5859004F7C7D /* BleConnect_Lib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AC329B8B259A5859004F7C7D /* XCRemoteSwiftPackageReference "BleConnect_Lib" */;
-			productName = BleConnect_Lib;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACC40B9825922FD300FD0E2A /* Project object */;
 }
