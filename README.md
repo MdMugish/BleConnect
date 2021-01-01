@@ -1,8 +1,22 @@
 # BleConnect
 
 Swift Package Manager : https://github.com/MdMugish/BleConnect_Lib
+ 
+## How to use this :
+After pulling this project please import swift package dependency.
+1. Pull this project 
+2. Open in XCode
+3. Tap on file
+4. Go to Swift package manager 
+5. Tap on Add swift package dependency 
+6. Paste this link "https://github.com/MdMugish/BleConnect_Lib"
+7. Next, Next, Finished
+8. Now you can use it (Done)
+9. Swift version must me 5.3.0 or greater/
+<br><br>
 
-This library is for Bluetooth connectivity on top of Core Bluetooth which supports -
+
+### This library is for Bluetooth connectivity on top of Core Bluetooth which supports -
 1. BLE Scan
 2. Filter device by Name
 3. Filter by UUID
